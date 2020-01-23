@@ -1,3 +1,3 @@
-# VladArc
-Here my test projects and others 
+# VladArc  < Vlad Mironets >
+ Here my test projects and another
   
