@@ -248,3 +248,62 @@ const merge = (...args) => {
 }
 
 console.log(merge(package0, package1, package2));
+
+
+// ### Задача 10 
+
+function boundingRect(coordsList) {
+
+
+    if (coordsList.length > 0) {
+        let maxX = Math.max.apply(null, coordsList.map(item => item.x))
+        let minX = Math.min.apply(null, coordsList.map(item => item.x))
+        let maxY = Math.max.apply(null, coordsList.map(item => item.y))
+        let minY = Math.min.apply(null, coordsList.map(item => item.y))
+        return {
+            top: maxY,
+            bottom: minY,
+            left: minX,
+            right: maxX
+        }
+
+    }
+    return {
+        top: 0,
+        right: 0,
+        bottom: 0,
+        left: 0
+    };
+}
+
+console.log(boundingRect([
+    { x: 49.2382, y: 28.4529 },
+    { x: 49.2433, y: 28.4641 },
+    { x: 49.2337, y: 28.4715 },
+    { x: 49.2365, y: 28.4637 }
+]))
+
+/* result ->
+top: 28.4715,
+right: 49.2433,
+bottom: 28.4529,
+left: 49.2337
+ */
+
+
+
+
+console.log(boundingRect([
+    { x: -8.141, y: -9.155 },
+    { x: -6.5477, y: -7.7143 },
+    { x: -8.0407, y: -6.4022 },
+    { x: -9.2639, y: -8.7352 },
+    { x: -7.1035, y: -6.6033 }
+]))
+/*
+result->
+top: -6.4022,
+                right: -6.5477,
+                bottom: -9.155,
+                left: -9.2639
+*/
