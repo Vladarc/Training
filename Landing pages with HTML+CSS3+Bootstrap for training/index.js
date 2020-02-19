@@ -1,6 +1,6 @@
 'use strick'
 
-
+// open modal window 
 
 $(function () {
     $('.sent-me').click(function () {
